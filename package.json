@@ -1,0 +1,57 @@
+{
+  "name": "@0rch1d/dsh-live-delivery",
+  "version": "0.1.0",
+  "description": "Live delivery for DeepSeek Harness: long tasks ship a usable first version, then improve version by version. Off by default; /deliver toggles it.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tests/state.spec.mjs && node tests/panel.spec.mjs && node tests/client.spec.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "host-plugin",
+    "client-plugin",
+    "live-delivery",
+    "long-running",
+    "agent"
+  ],
+  "license": "MIT"
+}

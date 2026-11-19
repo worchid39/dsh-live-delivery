@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Live delivery",
+    "description": "Long tasks ship a usable first version, then improve version by version. Off by default; type /deliver in a conversation to turn it on. The model calls ld_begin / ld_publish / ld_status / ld_done; each version is snapshotted under .live-delivery/<sessionId>/versions/vNNN/ in the directory where the session started, and a pill under the composer shows versions and remaining budget. A round is added automatically when the session idles and budget remains. Budgets are advisory, not hard stops.",
+    "detail": "docs/DETAIL.md"
+  }
+}

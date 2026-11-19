@@ -1,0 +1,15 @@
+# Bundle patch: 把本包的 Host 入口插进 profile 的插件树。
+# 以 bundle 方式安装后，插件行 id 为 `live-delivery`，可在 Plugins 页停用/启用。
+#
+# 可调参数（config 只写要改的键，插件会按键补默认值）：
+#   autoContinue     默认 true，交付进行中且预算未尽时自动开下一轮
+#   maxAutoRounds    默认 6，每任务累计自动续轮上限
+#   defaultBudget    默认 '30m'，ld_begin 未给 budget 时使用
+#   stateDir         默认 '.live-delivery'，相对会话目录的状态目录名
+#   snapshot         maxFiles 默认 1500、maxBytes 默认 64 MiB、entry 默认 'index.html'，
+#                    ignore 追加在默认忽略列表之后
+# 注意：本插件默认不启用，开关按会话记；用户在对话里 /deliver 切换。
+- insert:
+    - id: live-delivery
+      name: '@0rch1d/dsh-live-delivery'
+      config: {}

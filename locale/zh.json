@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "渐进交付",
+    "description": "长任务先交一个能用的版本，之后按版本推进。默认关闭，在对话里输入 /deliver 开启。模型通过 ld_begin / ld_publish / ld_status / ld_done 记录目标、预算与版本；每版快照落在会话创建目录的 .live-delivery/<sessionId>/versions/vNNN/，输入框下方的药丸显示版本与剩余预算。会话空闲且预算未尽时自动续轮。预算是提醒，不是硬拦截。",
+    "detail": "docs/DETAIL.md"
+  }
+}
