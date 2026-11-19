@@ -1,7 +1,7 @@
 {
   "name": "@0rch1d/dsh-live-delivery",
   "version": "0.1.0",
-  "description": "Live delivery for DeepSeek Harness: long tasks ship a usable first version, then improve version by version. Off by default; /deliver toggles it.",
+  "description": "Incremental delivery plugin for DeepSeek Harness: long tasks ship a usable first version, then improve version by version. Off by default; /deliver toggles it.",
   "type": "module",
   "main": "index.js",
   "exports": {
